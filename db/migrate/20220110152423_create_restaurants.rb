@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :gif
       t.string :country
-      t.string :text
+      t.string :description
       t.string :website
       t.integer :likes
      

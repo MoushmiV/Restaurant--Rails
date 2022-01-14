@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_01_14_215121) do
     t.string "image"
     t.string "gif"
     t.string "country"
-    t.string "text"
+    t.string "description"
     t.string "website"
     t.integer "likes"
     t.datetime "created_at", precision: 6, null: false

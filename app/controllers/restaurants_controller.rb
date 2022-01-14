@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
     before_action :set_restaurant, only: [:show, :update, :destroy]
  
     def index
-        @restaurants = Restaurant.all
+        @restaurants = Restaurant.all.order_by_update
         render json: @restaurants
     end
 
@@ -39,7 +39,7 @@ class RestaurantsController < ApplicationController
     end
 
     def restaurant_params
-        params.require(:restaurant).permit(:name, :image, :gif, :country, :text, :website, :likes)
+        params.require(:restaurant).permit(:name, :image, :gif, :country, :description, :website, :likes)
     end
 
 end

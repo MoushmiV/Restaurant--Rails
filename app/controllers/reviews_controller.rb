@@ -3,18 +3,18 @@ class ReviewsController < ApplicationController
 
     def index
         @reviews = Review.all
-        render json: @reviews
+        render json: @reviews, key_transform: :camel_lower
     end
 
     def show
-        render json: @review
+        render json: @review, key_transform: :camel_lower
     end
 
 
     def create
         @review = Review.new(review_params)
         if @review.save
-            render json: @review, status: :created, location: @review
+            render json: @review, status: :created, location: @review, key_transform: :camel_lower
         else
             render json: @review.errors, status: :unprocessable_entity
         end
@@ -23,7 +23,7 @@ class ReviewsController < ApplicationController
 
     def update
         if @review.update(review_params)
-            render json: @review
+            render json: @review, key_transform: :camel_lower
         else
             render json: @review.errors, status: :unprocessable_entity
         end
