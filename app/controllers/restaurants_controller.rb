@@ -21,7 +21,7 @@ class RestaurantsController < ApplicationController
     end
 
     def update
-        if @restaurant.update
+        if @restaurant.update(restaurant_params)
             render json: @restaurant
         else
             render json: @restaurant.errors, status: :unprocessable_entity
@@ -35,11 +35,11 @@ class RestaurantsController < ApplicationController
 
     private
     def set_restaurant
-        @restaurant - Restaurant.find(params[:id])
+        @restaurant = Restaurant.find(params[:id])
     end
 
     def restaurant_params
-        params.require(:restaurant).permit(:name, :image, :gif, :country)
+        params.require(:restaurant).permit(:name, :image, :gif, :country, :text, :website, :likes)
     end
 
 end
