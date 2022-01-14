@@ -3,7 +3,9 @@
 one:
   title: MyString
   content: MyString
+  restaurant: one
 
 two:
   title: MyString
   content: MyString
+  restaurant: two

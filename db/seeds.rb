@@ -107,3 +107,16 @@ Restaurant.create([
         text: "Whatever you do… don't look down!  Once you get past the initial fear-factor, the views from this quaint rock-face restaurant are unparalleled. You can even watch bungee-jumpers leap off the bridge opposite!  The menu features standard local specialities with fish, pork and duck, and, surprisingly enough, turtle, so you can be sure that here you’ll have a true taste of the Orient."
     }
 ])
+
+Review.create([
+    {
+        title: "Good Restaurant",
+        content: "We are serving up made-from-scratch small plates in a rustic, cozy atmosphere with a standout wine list that won't break the bank.",
+        restaurant_id: 1
+    },
+    {
+        title: "Just So So",
+        content: "emmmm...",
+        restaurant_id: 2
+    }
+])
