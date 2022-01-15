@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-    before_action :set_restaurant, only: [:show, :update, :destroy]
+    before_action :set_review, only: [:show, :update, :destroy]
 
     def index
         @reviews = Review.all
@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
     def create
         @review = Review.new(review_params)
         if @review.save
-            render json: @review, status: :created, location: @review, key_transform: :camel_lower
+            render json: @review, key_transform: :camel_lower
         else
             render json: @review.errors, status: :unprocessable_entity
         end
@@ -40,6 +40,6 @@ class ReviewsController < ApplicationController
     end
 
     def review_params
-        params.require(:review).permit(:title, :content, :category_id)
+        params.require(:review).permit(:title, :content, :restaurant_id)
     end
 end

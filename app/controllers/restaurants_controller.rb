@@ -1,12 +1,13 @@
 class RestaurantsController < ApplicationController
-    before_action :set_restaurant, only: [:show, :update, :destroy]
+    #before_action :set_restaurant, only: [:show, :update, :destroy]
  
     def index
-        @restaurants = Restaurant.all.order_by_update
+        @restaurants = Restaurant.all.order_by_name
         render json: @restaurants, key_transform: :camel_lower
     end
 
     def show
+        @restaurant = Restaurant.find(params[:id])
         render json: @restaurant, key_transform: :camel_lower
     end
 
@@ -21,6 +22,7 @@ class RestaurantsController < ApplicationController
     end
 
     def update
+        @restaurant = Restaurant.find(params[:id])
         if @restaurant.update(restaurant_params)
             render json: @restaurant
         else
@@ -29,6 +31,7 @@ class RestaurantsController < ApplicationController
     end
 
     def destroy
+        @restaurant = Restaurant.find(params[:id])
         @restaurant.destroy
         render json: {message: "successfully deleted"}
     end

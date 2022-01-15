@@ -35,8 +35,8 @@ class Restaurant < ApplicationRecord
     #     self.name = name.titlecase
     # end
 
-    def self.order_by_update
-        self.order(:updated_at)
+    def self.order_by_name
+        self.order(:name)
     end  
     
 end
