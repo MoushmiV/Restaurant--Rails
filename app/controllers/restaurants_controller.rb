@@ -3,20 +3,20 @@ class RestaurantsController < ApplicationController
  
     def index
         @restaurants = Restaurant.all.order_by_update
-        render json: @restaurants
+        render json: @restaurants, key_transform: :camel_lower
     end
 
     def show
-        render json: @restaurant
+        render json: @restaurant, key_transform: :camel_lower
     end
 
     # HTTP status code - 422 :unprocessable_entity
     def create
         @restaurant = Restaurant.new(restaurant_params)
         if @restaurant.save
-            render json: @restaurant, status: :created, location: @restaurant
+            render json: @restaurant, status: :created, location: restaurant, key_transform: :camel_lower
             else
-            render json: @restaurant.errors, status: :unprocessable_entity
+                render json: {error: "Meal could not be saved. Please try again."}, status: :unprocessable_entity
             end
     end
 
@@ -24,7 +24,7 @@ class RestaurantsController < ApplicationController
         if @restaurant.update(restaurant_params)
             render json: @restaurant
         else
-            render json: @restaurant.errors, status: :unprocessable_entity
+            render json: {error: "Meal could not be udpated. Please try again."}, status: :unprocessable_entity
         end
     end
 
