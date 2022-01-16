@@ -1,5 +1,5 @@
 class RestaurantSerializer < ActiveModel::Serializer
-  attributes :id, :name, :image, :country, :description, :website, :updated_at, :gif, :likes
+  attributes :id, :name, :image, :country, :description, :address, :updated_at, :gif, :likes
   
   has_many :reviews
 end
