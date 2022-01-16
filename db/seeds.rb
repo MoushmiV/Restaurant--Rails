@@ -52,7 +52,7 @@ Restaurant.create([
         image: "https://www.gohen.com/blog/wp-content/uploads/2014/11/soundsofsilence-restaurants.jpg",
         gif: "https://media-cdn.tripadvisor.com/media/photo-s/18/40/e6/8b/photo0jpg.jpg",
         country: "Australia",
-        likes: 104,
+        likes: 197,
         address: "170 Yulara Dr, Yulara NT 0872, Australia",
         description: "With this outdoor dining experience, courtesy of Ayers Rock Resort, guests can enjoy a fantastic introduction to Aboriginal culture and cuisine under the glittering outback sky. Diners can expect a bush tucker buffet brimming with local delicacies, from crocodile and kangaroo, to the native barramundi and quandong (don't ask, just eat). Your meal will be served on a viewing platform overlooking the stunning Uluru-Kata Tjuta National Park, where you will be entertained by traditional dance and Didgeridoo performances. As night falls, you'll be talked through the mysteries of the southern night sky by the resident astronomer. We're getting all starry eyed at the thought of it…"
     },
@@ -62,7 +62,7 @@ Restaurant.create([
         image: "https://www.gohen.com/blog/wp-content/uploads/2014/11/ithaa-restaurants.jpg",
         gif: "https://media0.giphy.com/media/7JzHsh3UTip20/giphy.gif",
         country: "Maldives",
-        likes: 105,
+        likes: 205,
         address: "JP8F+6H9, Conrad Rangali Island 20077, Maldives",
         description: "There is no denying how breathtaking the underwater view is at Ithaa, rated 'the most beautiful restaurant in the world' by the New York Daily Times earlier this year. Also boasting the accolade of 'the world's first all-glass undersea restaurant', Ithaa has a beautiful menu of dishes such as Yellow Tail King Fish with Saffron Champagne Rissotto and Beurre Blanc Foam. Translating to 'mother of pearl' in the Maldivian language of Dihevi, you can understand why this restaurant was named after something so beautiful."
     },
@@ -93,7 +93,7 @@ Restaurant.create([
         image: "https://www.gohen.com/blog/wp-content/uploads/2014/11/thewhite-restaurants.jpg",
         gif: "https://media-cdn.tripadvisor.com/media/photo-s/08/6f/57/4c/outside-view.jpg",
         country: "Georgia",
-        likes: 108,
+        likes: 151,
         address: "84 Sherie Khimshiashvili Street, Batumi, Adjara, Georgia",
         description: "Originally designed as a joke in 2011, this topsy-turvy restaurant was based on the American White House… but simply reverted. Here you'll see tables, chairs, and even toilets fixed to the ceiling, and you can enjoy traditional Georgian cuisine, such as Shashlik (kebab) and Chashushuli (a type of ham stew). The best part is, if you get drunk, everything will turn the right way round!"
     },
@@ -142,5 +142,24 @@ Review.create([
         nickname: "Julia",
         comment: "The food is amazing, the staff, the rooms but more so the Giraffes. It's so hard for a normal human being to find a complaint.",
         restaurant_id: 1
+    },
+
+    {
+        nickname: "James K",
+        comment: "Shockingly awful. Bland, unseasoned & overcooked food.",
+        restaurant_id: 3
+    },
+
+    {
+        nickname: "Karen",
+        comment: "This restaurant is a SCAM. It is a highly overpriced tourist trap, with terrible food. Rarely do I write reviews, but after dinner last night, I felt compelled to warn others.",
+        restaurant_id: 3
+    },
+
+    {
+        nickname: "rrre",
+        comment: "The view and location of the restaurant was stunning. The most beautiful restaurant I have eaten at.",
+        restaurant_id: 3
     }
+
 ])
