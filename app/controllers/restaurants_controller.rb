@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
     def create
         @restaurant = Restaurant.new(restaurant_params)
         if @restaurant.save
-            render json: @restaurant, status: :created, location: restaurant, key_transform: :camel_lower
+            render json: @restaurant, status: :created, location: @restaurant, key_transform: :camel_lower
             else
                 render json: {error: "Meal could not be saved. Please try again."}, status: :unprocessable_entity
             end

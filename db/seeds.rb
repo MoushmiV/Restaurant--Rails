@@ -110,13 +110,20 @@ Restaurant.create([
 
 Review.create([
     {
-        title: "Good Restaurant",
-        content: "We are serving up made-from-scratch small plates in a rustic, cozy atmosphere with a standout wine list that won't break the bank.",
+        nickname: "Mike",
+        comment: "We are serving up made-from-scratch small plates in a rustic, cozy atmosphere with a standout wine list that won't break the bank.",
         restaurant_id: 1
     },
+
     {
-        title: "Just So So",
-        content: "emmmm...",
-        restaurant_id: 2
-    }
+        nickname: "Joy",
+        comment: "This is my favorite Chinese Restaurant!",
+        restaurant_id: 10
+    },
+
+    {
+        nickname: "Lena",
+        comment: "CuliAir Skydining - a deliciously unorthodox adventure in the world's only hot air balloon restaurant...Taking to the skies gently as a breeze, dining with top wines between heaven and earth, floating out into the infinite... Is this enjoyment at its height? Definitely!",
+        restaurant_id: 1
+    },
 ])

@@ -3,8 +3,8 @@ class Restaurant < ApplicationRecord
 
     before_validation :set_defalut_gif, :set_defalut_image, :set_default_description
 
-    # validates :name, presence: true, uniqueness: true
-    # validates_presence_of :country
+    validates :name, presence: true, uniqueness: true
+    validates_presence_of :country
 
 
     def set_defalut_gif
@@ -37,6 +37,10 @@ class Restaurant < ApplicationRecord
 
     def self.order_by_name
         self.order(:name)
-    end  
+    end
+    
+    def set_format_date
+        self.updated_at.strftime('(%Y-%m-%d')
+    end
     
 end
