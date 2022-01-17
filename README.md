@@ -11,6 +11,7 @@ In the project directory, you can run:
 ### `rails db:seed`
 
 Runs the app in the development mode.\
+### `rails s -p 5000`
 Open [http://localhost:5000/restaurants](http://localhost:5000/restaurants) to view it in your browser.
 
 ## Contributing
