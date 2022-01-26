@@ -1,4 +1,4 @@
-## Eat Here Rails API Backend 
+## Eat Here Rails API Backend - backup version
 
 This project was built with Ruby on Rails. 
 Please visit the frontend React project <a href="https://github.com/lena0128/eat-here-react-app">here</a>
