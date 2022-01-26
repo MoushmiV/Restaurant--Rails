@@ -1,18 +1,10 @@
-## Eat Here Rails API Backend - backup version
+## Eat Here Rails API Backend Repo
 
 This project was built with Ruby on Rails. 
 Please visit the frontend React project <a href="https://github.com/lena0128/eat-here-react-app">here</a>
 
-# How to Install & Run
-
-In the project directory, you can run:
-### `bundle install`
-### `rails db:migrate`
-### `rails db:seed`
-
-Runs the app in the development mode.\
-### `rails s -p 5000`
-Open [http://localhost:5000/restaurants](http://localhost:5000/restaurants) to view it in your browser.
+# Live Site
+Please feel free to visit the live site: https://relaxed-goldstine-8d48b2.netlify.app/
 
 ## Contributing
 
